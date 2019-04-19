@@ -1,0 +1,21 @@
+.switchDiv{
+    justify-content: center;
+
+    display: flex;
+    flex-direction: row;
+  }
+  
+.TextDiv{
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+  }
+  
+.switchText {
+    color:white;
+    margin-top: 3px;
+    margin-right: 20px;
+    flex-direction: row;
+    font-size: large;
+  }

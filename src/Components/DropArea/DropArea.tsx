@@ -4,11 +4,12 @@ import './DropArea.css'
 
 interface IState {
     imageFiles: any[],
-    dropzone: any
+    dropzone: any,
 }
 
 interface IProps{
     setResults:any
+    styleComponent: any
 }
 
 export default class DropArea extends React.Component<IProps, IState>{
@@ -69,9 +70,9 @@ export default class DropArea extends React.Component<IProps, IState>{
         return (
             <div className="cont">
                 <div className="centreText">
-                    <div className="dropZone">
-                        <ReactDropzone accept='image/*' onDrop={this.state.dropzone} style={{ position: "relative" }}>
-                            <div className="dropZoneText">
+                    <div className="dropZone"   style={this.props.styleComponent.dropArea}>
+                        <ReactDropzone accept='image/*' onDrop={this.state.dropzone} style={{ position: "relative",alignContent:"center" }}>
+                            <div className="dropZoneText"   style={this.props.styleComponent.dropAreaText}>
                                 {
                                     this.state.imageFiles.length > 0 ?
                                         <div>{this.state.imageFiles.map((file) => <img className="image1" key={file.name} src={file.preview} />)}</div> :
