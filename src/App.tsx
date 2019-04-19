@@ -53,7 +53,7 @@ class App extends React.Component<{},IState>{
           <Header styleComponent={this.state.style}/>
           <ThemeTogle onChangeSwitch={this.onChangeSwitch}  checkedState={this.state.darkMode} textStyle={this.state.style.textColour}/>
           <DropArea setResults={this.resultstate} styleComponent={this.state.style}/>
-          <Result result={this.state.result} filelength={this.state.filelength} />
+          <Result result={this.state.result} filelength={this.state.filelength} textColour={this.state.style.textColour}/>
         </div>
       );
     }

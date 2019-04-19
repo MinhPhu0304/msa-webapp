@@ -4,6 +4,7 @@ import Loader from 'react-loader-spinner'
 interface IProps{
   result:string
   filelength:any
+  textColour:any
 }
 
 export default class Result extends React.Component<IProps> {
@@ -14,7 +15,7 @@ export default class Result extends React.Component<IProps> {
         {
           this.props.result === "" && this.props.filelength>0 ?
             <Loader type="ThreeDots" color="#62FF00" height={80} width={80} /> :
-            <p>{this.props.result}</p>
+            <p  style={this.props.textColour}>{this.props.result}</p>
         }
       </div>
     )
